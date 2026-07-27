@@ -26,8 +26,25 @@
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "camera=(), microphone=(), geolocation=()"
 
-# Long-cache hashed static assets produced by Vite
+# Long-cache hashed static assets produced by Vite.
+# These filenames contain a content hash, so they can be cached forever —
+# a code change produces a new filename that browsers must re-download.
 [[headers]]
   for = "/assets/*"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
+
+# Never cache the HTML entry point. index.html references the current
+# hashed JS/CSS bundles, so browsers must always re-fetch it to discover
+# the latest build. This prevents returning visitors from being served a
+# stale app after a new deploy.
+[[headers]]
+  for = "/index.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# Apply the same no-cache policy to the root path.
+[[headers]]
+  for = "/"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
