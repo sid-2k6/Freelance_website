@@ -20,8 +20,8 @@ insert into public.notifications (type, title, body, read) values
 insert into public.projects
   (project_id, full_name, email, project_title, service_type, category, budget, status, priority, progress, assigned_developer, country, company, deadline, invoice_status)
 values
-  ('TNS-9F3K2Q', 'Ananya Rao', 'ananya@medivision.io', 'AI Diagnostic Imaging Platform', 'Computer Vision', 'AI', '$5,000 – $10,000', 'Live', 'High', 65, 'Elena Voss', 'India', 'MediVision', '2026-09-15', 'Partially Paid'),
-  ('TNS-7B2M8X', 'Marcus Feld', 'marcus@insightflow.co', 'Executive Analytics Dashboard', 'Power BI Dashboards', 'Dashboard', '$2,500 – $5,000', 'Completed', 'Medium', 100, 'Kwame Osei', 'Germany', 'InsightFlow', '2026-06-20', 'Paid')
+  ('TNS-9F3K2Q', 'Ananya Rao', 'ananya@medivision.io', 'AI Diagnostic Imaging Platform', 'Computer Vision', 'AI', '₹50,000 – ₹1,00,000', 'Live', 'High', 65, 'Elena Voss', 'India', 'MediVision', '2026-09-15', 'Partially Paid'),
+  ('TNS-7B2M8X', 'Marcus Feld', 'marcus@insightflow.co', 'Executive Analytics Dashboard', 'Power BI Dashboards', 'Dashboard', '₹25,000 – ₹50,000', 'Completed', 'Medium', 100, 'Kwame Osei', 'Germany', 'InsightFlow', '2026-06-20', 'Paid')
 on conflict (project_id) do nothing;
 
 -- Sample project updates for the tracking timeline

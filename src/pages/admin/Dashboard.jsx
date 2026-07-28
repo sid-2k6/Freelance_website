@@ -25,7 +25,7 @@ import {
 } from 'recharts';
 import { getProjects } from '../../services/api';
 import { Skeleton } from '../../components/ui/Loader';
-import { statusStyle, formatDate, timeAgo, cx } from '../../utils/helpers';
+import { statusStyle, formatCurrency, formatDate, timeAgo, cx } from '../../utils/helpers';
 import { useTheme } from '../../context/ThemeContext';
 import { staggerContainer, fadeInUp } from '../../utils/motion';
 
@@ -47,7 +47,7 @@ export default function Dashboard() {
     const by = (status) => projects.filter((p) => p.status === status).length;
     const revenue = projects
       .filter((p) => p.invoice_status === 'Paid' || p.invoice_status === 'Partially Paid')
-      .length * 4200; // illustrative avg deal size for demo
+      .length * 45000; // illustrative avg deal size for demo (INR)
     const today = new Date().toDateString();
     const todaysRequests = projects.filter(
       (p) => new Date(p.created_at).toDateString() === today
@@ -140,7 +140,7 @@ export default function Dashboard() {
               <FiDollarSign className="h-4 w-4" /> Estimated Revenue
             </p>
             <p className="mt-1 font-display text-4xl font-extrabold">
-              ${metrics.revenue.toLocaleString()}
+              {formatCurrency(metrics.revenue)}
             </p>
             <p className="mt-1 text-sm text-white/70">Based on paid & partially-paid invoices</p>
           </div>

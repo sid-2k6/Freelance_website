@@ -5,7 +5,7 @@ export const pricingPlans = [
   {
     name: 'Starter',
     tagline: 'For students & quick builds',
-    price: 199,
+    price: 1499,
     period: 'per project',
     highlight: false,
     features: [
@@ -20,7 +20,7 @@ export const pricingPlans = [
   {
     name: 'Professional',
     tagline: 'For startups & growing teams',
-    price: 899,
+    price: 5999,
     period: 'per project',
     highlight: true,
     features: [
@@ -36,7 +36,7 @@ export const pricingPlans = [
   {
     name: 'Enterprise',
     tagline: 'For scale & compliance',
-    price: 2499,
+    price: 14999,
     period: 'per project',
     highlight: false,
     features: [
@@ -67,11 +67,11 @@ export const pricingPlans = [
 ];
 
 export const budgetRanges = [
-  'Under $250',
-  '$250 – $500',
-  '$500 – $1,000',
-  '$1,000 – $2,500',
-  '$2,500 – $5,000',
-  '$5,000 – $10,000',
-  '$10,000+',
+  'Under ₹2,000',
+  '₹2,000 – ₹5,000',
+  '₹5,000 – ₹10,000',
+  '₹10,000 – ₹25,000',
+  '₹25,000 – ₹50,000',
+  '₹50,000 – ₹1,00,000',
+  '₹1,00,000+',
 ];

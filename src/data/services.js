@@ -38,6 +38,9 @@ import {
  * The full service catalog for TechNova Solutions. Each service is grouped by
  * category (used by the Services page filters) and carries the metadata used
  * across service cards and the service detail page.
+ *
+ * `startingPrice` values are entry-level base prices in Indian Rupees (INR)
+ * and are rendered via the formatCurrency helper (which defaults to INR).
  */
 export const serviceCategories = [
   'All',
@@ -64,7 +67,7 @@ export const services = [
       'We design, train and ship production-grade machine learning systems — covering data pipelines, feature engineering, model training, evaluation and monitoring so your intelligent product performs reliably at scale.',
     technologies: ['Python', 'Scikit-Learn', 'TensorFlow', 'PyTorch', 'MLflow'],
     delivery: '3–8 weeks',
-    startingPrice: 1200,
+    startingPrice: 5999,
     featured: true,
   },
   {
@@ -77,7 +80,7 @@ export const services = [
       'Custom neural architectures (CNNs, RNNs, Transformers) tuned for your dataset, with GPU-optimized training and rigorous evaluation to reach state-of-the-art accuracy.',
     technologies: ['PyTorch', 'TensorFlow', 'Keras', 'CUDA'],
     delivery: '4–10 weeks',
-    startingPrice: 1500,
+    startingPrice: 6999,
     featured: true,
   },
   {
@@ -90,7 +93,7 @@ export const services = [
       'Image classification, detection, tracking and segmentation pipelines — from prototype to real-time inference on edge or cloud.',
     technologies: ['OpenCV', 'PyTorch', 'YOLO', 'Detectron2'],
     delivery: '3–8 weeks',
-    startingPrice: 1400,
+    startingPrice: 5999,
     featured: true,
   },
   {
@@ -103,7 +106,7 @@ export const services = [
       'Sentiment analysis, entity extraction, summarization, classification and semantic search built on modern transformer models.',
     technologies: ['spaCy', 'HuggingFace', 'NLTK', 'Transformers'],
     delivery: '3–7 weeks',
-    startingPrice: 1300,
+    startingPrice: 5499,
   },
   {
     slug: 'llm-integration',
@@ -115,7 +118,7 @@ export const services = [
       'Prompt engineering, function calling, guardrails and streaming UIs that wire large language models directly into your workflows.',
     technologies: ['OpenAI', 'Gemini', 'LangChain', 'Ollama'],
     delivery: '2–6 weeks',
-    startingPrice: 900,
+    startingPrice: 4999,
     featured: true,
   },
   {
@@ -128,7 +131,7 @@ export const services = [
       'Context-aware chatbots with memory, knowledge grounding and human handoff, deployable on web, WhatsApp and Slack.',
     technologies: ['LangChain', 'OpenAI', 'Rasa', 'Twilio'],
     delivery: '2–5 weeks',
-    startingPrice: 800,
+    startingPrice: 3999,
   },
   {
     slug: 'python-development',
@@ -140,7 +143,7 @@ export const services = [
       'From automation scripts to full backend services, we write clean, tested and well-documented Python.',
     technologies: ['Python', 'FastAPI', 'Flask', 'Pytest'],
     delivery: '1–5 weeks',
-    startingPrice: 600,
+    startingPrice: 2499,
   },
   {
     slug: 'web-development',
@@ -152,7 +155,7 @@ export const services = [
       'Marketing sites, portals and web apps engineered for performance, SEO and conversion.',
     technologies: ['React', 'Next.js', 'Tailwind', 'Vite'],
     delivery: '2–6 weeks',
-    startingPrice: 700,
+    startingPrice: 3999,
     featured: true,
   },
   {
@@ -165,7 +168,7 @@ export const services = [
       'Component-driven React applications with state management, testing and delightful micro-interactions.',
     technologies: ['React', 'Redux', 'React Query', 'Framer Motion'],
     delivery: '2–6 weeks',
-    startingPrice: 800,
+    startingPrice: 4499,
   },
   {
     slug: 'full-stack-development',
@@ -177,7 +180,7 @@ export const services = [
       'End-to-end product engineering with authentication, payments, dashboards and cloud deployment.',
     technologies: ['React', 'Node', 'Supabase', 'PostgreSQL'],
     delivery: '4–12 weeks',
-    startingPrice: 2000,
+    startingPrice: 9999,
     featured: true,
   },
   {
@@ -190,7 +193,7 @@ export const services = [
       'React Native and Flutter apps with native performance, push notifications and offline support.',
     technologies: ['React Native', 'Flutter', 'Expo', 'Firebase'],
     delivery: '4–10 weeks',
-    startingPrice: 1800,
+    startingPrice: 9999,
   },
   {
     slug: 'desktop-software',
@@ -202,7 +205,7 @@ export const services = [
       'Cross-platform desktop tools built with Electron or Tauri, packaged and auto-updating.',
     technologies: ['Electron', 'Tauri', 'React', 'Rust'],
     delivery: '3–8 weeks',
-    startingPrice: 1500,
+    startingPrice: 6999,
   },
   {
     slug: 'data-science',
@@ -214,7 +217,7 @@ export const services = [
       'Exploratory analysis, statistical modeling and predictive insights delivered as clear, actionable reports.',
     technologies: ['Python', 'Pandas', 'NumPy', 'Scikit-Learn'],
     delivery: '2–6 weeks',
-    startingPrice: 1000,
+    startingPrice: 4999,
   },
   {
     slug: 'data-analytics',
@@ -226,7 +229,7 @@ export const services = [
       'We build analytics pipelines and interactive dashboards so your team can answer questions in seconds.',
     technologies: ['SQL', 'Pandas', 'Metabase', 'dbt'],
     delivery: '2–5 weeks',
-    startingPrice: 900,
+    startingPrice: 3999,
   },
   {
     slug: 'power-bi-dashboards',
@@ -238,7 +241,7 @@ export const services = [
       'Polished Power BI reports with data modeling, DAX measures and automated refresh.',
     technologies: ['Power BI', 'DAX', 'SQL', 'Power Query'],
     delivery: '1–4 weeks',
-    startingPrice: 700,
+    startingPrice: 2999,
   },
   {
     slug: 'automation',
@@ -250,7 +253,7 @@ export const services = [
       'Workflow automation across apps, files and APIs to remove manual, error-prone steps.',
     technologies: ['Python', 'Selenium', 'Zapier', 'Cron'],
     delivery: '1–4 weeks',
-    startingPrice: 500,
+    startingPrice: 1999,
   },
   {
     slug: 'web-scraping',
@@ -262,7 +265,7 @@ export const services = [
       'Scalable, respectful scrapers with proxy rotation, scheduling and clean structured output.',
     technologies: ['Python', 'Scrapy', 'Playwright', 'BeautifulSoup'],
     delivery: '1–4 weeks',
-    startingPrice: 500,
+    startingPrice: 1999,
   },
   {
     slug: 'api-development',
@@ -274,7 +277,7 @@ export const services = [
       'REST and GraphQL APIs with authentication, rate limiting, versioning and OpenAPI docs.',
     technologies: ['FastAPI', 'Node', 'GraphQL', 'OpenAPI'],
     delivery: '2–6 weeks',
-    startingPrice: 900,
+    startingPrice: 4499,
   },
   {
     slug: 'cloud-deployment',
@@ -286,7 +289,7 @@ export const services = [
       'CI/CD, infrastructure-as-code and observability so releases are safe, repeatable and fast.',
     technologies: ['AWS', 'Azure', 'GCP', 'Terraform'],
     delivery: '1–5 weeks',
-    startingPrice: 800,
+    startingPrice: 3999,
   },
   {
     slug: 'database-design',
@@ -298,7 +301,7 @@ export const services = [
       'Normalized relational and NoSQL schemas, indexing strategy, migrations and query tuning.',
     technologies: ['PostgreSQL', 'MongoDB', 'Supabase', 'Redis'],
     delivery: '1–4 weeks',
-    startingPrice: 600,
+    startingPrice: 2999,
   },
   {
     slug: 'ui-ux-design',
@@ -310,7 +313,7 @@ export const services = [
       'Research-driven UX, high-fidelity UI and design systems delivered in Figma and ready for handoff.',
     technologies: ['Figma', 'Framer', 'Design Systems'],
     delivery: '1–5 weeks',
-    startingPrice: 700,
+    startingPrice: 3499,
     featured: true,
   },
   {
@@ -323,7 +326,7 @@ export const services = [
       'We implement and validate ML/AI research papers with documented experiments and reproducible results.',
     technologies: ['PyTorch', 'TensorFlow', 'Papers With Code'],
     delivery: '2–8 weeks',
-    startingPrice: 900,
+    startingPrice: 4999,
   },
   {
     slug: 'final-year-projects',
@@ -335,7 +338,7 @@ export const services = [
       'Complete final-year projects with source code, documentation, report and viva preparation.',
     technologies: ['Python', 'React', 'ML', 'IoT'],
     delivery: '3–10 weeks',
-    startingPrice: 400,
+    startingPrice: 2499,
   },
   {
     slug: 'ieee-projects',
@@ -347,7 +350,7 @@ export const services = [
       'Implementations aligned with IEEE paper standards, complete with base paper analysis and results.',
     technologies: ['Python', 'MATLAB', 'ML', 'DL'],
     delivery: '3–8 weeks',
-    startingPrice: 450,
+    startingPrice: 2999,
   },
   {
     slug: 'college-projects',
@@ -359,7 +362,7 @@ export const services = [
       'From web apps to ML models — well-documented college projects with mentorship.',
     technologies: ['Python', 'Java', 'React', 'SQL'],
     delivery: '2–6 weeks',
-    startingPrice: 250,
+    startingPrice: 1499,
   },
   {
     slug: 'mini-projects',
@@ -371,7 +374,7 @@ export const services = [
       'Compact projects perfect for semester submissions, delivered quickly with clear docs.',
     technologies: ['Python', 'HTML/CSS', 'JavaScript'],
     delivery: '3–10 days',
-    startingPrice: 120,
+    startingPrice: 999,
   },
   {
     slug: 'capstone-projects',
@@ -383,7 +386,7 @@ export const services = [
       'Multi-week capstone builds with architecture, testing and a polished final presentation.',
     technologies: ['Full Stack', 'ML', 'Cloud'],
     delivery: '4–12 weeks',
-    startingPrice: 600,
+    startingPrice: 3999,
   },
   {
     slug: 'model-building',
@@ -395,7 +398,7 @@ export const services = [
       'Feature engineering, model selection, hyperparameter tuning and evaluation for your use case.',
     technologies: ['Scikit-Learn', 'XGBoost', 'PyTorch'],
     delivery: '2–6 weeks',
-    startingPrice: 900,
+    startingPrice: 4999,
   },
   {
     slug: 'image-classification',
@@ -407,7 +410,7 @@ export const services = [
       'Transfer-learning classifiers trained and optimized for your categories and constraints.',
     technologies: ['PyTorch', 'TensorFlow', 'ResNet', 'EfficientNet'],
     delivery: '2–5 weeks',
-    startingPrice: 800,
+    startingPrice: 4499,
   },
   {
     slug: 'object-detection',
@@ -419,7 +422,7 @@ export const services = [
       'YOLO and DETR-based detection pipelines with annotation, training and deployment.',
     technologies: ['YOLO', 'Detectron2', 'OpenCV'],
     delivery: '3–6 weeks',
-    startingPrice: 1000,
+    startingPrice: 5999,
   },
   {
     slug: 'segmentation',
@@ -431,7 +434,7 @@ export const services = [
       'Semantic and instance segmentation for medical, satellite and industrial imagery.',
     technologies: ['U-Net', 'Mask R-CNN', 'PyTorch'],
     delivery: '3–7 weeks',
-    startingPrice: 1100,
+    startingPrice: 6499,
   },
   {
     slug: 'recommendation-systems',
@@ -443,7 +446,7 @@ export const services = [
       'Collaborative filtering and hybrid recommenders that boost engagement and conversion.',
     technologies: ['Python', 'Surprise', 'TensorFlow', 'Faiss'],
     delivery: '3–7 weeks',
-    startingPrice: 1000,
+    startingPrice: 5999,
   },
   {
     slug: 'generative-ai',
@@ -455,7 +458,7 @@ export const services = [
       'Diffusion and transformer-based generation, fine-tuned and guardrailed for your brand.',
     technologies: ['Stable Diffusion', 'OpenAI', 'HuggingFace'],
     delivery: '3–8 weeks',
-    startingPrice: 1200,
+    startingPrice: 6999,
     featured: true,
   },
   {
@@ -468,7 +471,7 @@ export const services = [
       'Document parsing and OCR pipelines for invoices, IDs and forms with high accuracy.',
     technologies: ['Tesseract', 'PaddleOCR', 'OpenCV'],
     delivery: '2–5 weeks',
-    startingPrice: 700,
+    startingPrice: 3499,
   },
   {
     slug: 'speech-recognition',
@@ -480,7 +483,7 @@ export const services = [
       'ASR pipelines using Whisper and streaming transcription for meetings and support calls.',
     technologies: ['Whisper', 'PyTorch', 'Kaldi'],
     delivery: '2–6 weeks',
-    startingPrice: 900,
+    startingPrice: 5499,
   },
   {
     slug: 'voice-assistant',
@@ -492,7 +495,7 @@ export const services = [
       'Wake-word detection, speech-to-text, intent handling and text-to-speech in one loop.',
     technologies: ['Whisper', 'LLM', 'TTS'],
     delivery: '4–8 weeks',
-    startingPrice: 1300,
+    startingPrice: 7999,
   },
   {
     slug: 'rag-systems',
@@ -504,7 +507,7 @@ export const services = [
       'Retrieval-augmented generation with vector databases, chunking strategies and citations.',
     technologies: ['LangChain', 'pgvector', 'OpenAI', 'Pinecone'],
     delivery: '3–7 weeks',
-    startingPrice: 1200,
+    startingPrice: 6999,
     featured: true,
   },
   {
@@ -517,7 +520,7 @@ export const services = [
       'LoRA and full fine-tuning with dataset curation, evaluation and cost optimization.',
     technologies: ['HuggingFace', 'PEFT', 'PyTorch'],
     delivery: '2–6 weeks',
-    startingPrice: 1100,
+    startingPrice: 6499,
   },
   {
     slug: 'model-deployment',
@@ -529,7 +532,7 @@ export const services = [
       'Scalable model serving with autoscaling, monitoring, versioning and A/B testing.',
     technologies: ['FastAPI', 'BentoML', 'TorchServe'],
     delivery: '1–4 weeks',
-    startingPrice: 800,
+    startingPrice: 3999,
   },
   {
     slug: 'docker-deployment',
@@ -541,7 +544,7 @@ export const services = [
       'Dockerized applications with multi-stage builds, compose files and registry setup.',
     technologies: ['Docker', 'Compose', 'Kubernetes'],
     delivery: '1–3 weeks',
-    startingPrice: 500,
+    startingPrice: 2499,
   },
   {
     slug: 'consultation',
@@ -553,7 +556,7 @@ export const services = [
       'Architecture reviews, technology strategy and hands-on mentorship from senior engineers.',
     technologies: ['Strategy', 'Architecture', 'Code Review'],
     delivery: 'Same week',
-    startingPrice: 150,
+    startingPrice: 799,
   },
 ];
 

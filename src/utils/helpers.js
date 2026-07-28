@@ -22,10 +22,10 @@ export function generateProjectId(prefix = 'TNS') {
   return `${prefix}-${code}`;
 }
 
-/** Format a number as compact currency (USD by default). */
-export function formatCurrency(value, currency = 'USD') {
+/** Format a number as compact currency (INR by default). */
+export function formatCurrency(value, currency = 'INR') {
   if (value === null || value === undefined || Number.isNaN(Number(value))) return '—';
-  return new Intl.NumberFormat('en-US', {
+  return new Intl.NumberFormat('en-IN', {
     style: 'currency',
     currency,
     maximumFractionDigits: 0,

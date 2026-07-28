@@ -10,15 +10,15 @@ const INVOICE_STATUSES = ['Unpaid', 'Partially Paid', 'Paid', 'Refunded'];
 // Rough numeric value derived from the budget range for illustrative totals.
 const budgetValue = (range) => {
   const map = {
-    'Under $250': 200,
-    '$250 – $500': 400,
-    '$500 – $1,000': 800,
-    '$1,000 – $2,500': 1800,
-    '$2,500 – $5,000': 3800,
-    '$5,000 – $10,000': 7500,
-    '$10,000+': 12000,
+    'Under ₹2,000': 1500,
+    '₹2,000 – ₹5,000': 3500,
+    '₹5,000 – ₹10,000': 7500,
+    '₹10,000 – ₹25,000': 17500,
+    '₹25,000 – ₹50,000': 37500,
+    '₹50,000 – ₹1,00,000': 75000,
+    '₹1,00,000+': 125000,
   };
-  return map[range] || 1500;
+  return map[range] || 10000;
 };
 
 const chip = {

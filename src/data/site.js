@@ -17,8 +17,8 @@ export const site = {
   email: import.meta.env.VITE_CONTACT_EMAIL || 'hello@technova.solutions',
   phone: '+1 (555) 123-4567',
   whatsapp: import.meta.env.VITE_WHATSAPP_NUMBER || '15551234567',
-  address: '2100 Innovation Drive, Suite 400, San Francisco, CA',
-  hours: 'Mon – Sat · 9:00 AM – 7:00 PM (PST)',
+  address: 'Coimbatore, Tamil Nadu, India',
+  hours: 'Available 24/7 · 365 days a year',
 };
 
 export const socialLinks = [
